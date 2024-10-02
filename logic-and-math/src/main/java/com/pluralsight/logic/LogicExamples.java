@@ -20,12 +20,12 @@ public class LogicExamples {
         area = area + 1;
         System.out.println(area);
 
-        area ++;
+        area++;
         System.out.println(area);
 
         //System.out.println(area++);
 
-        System.out.println(++ area);
+        System.out.println(++area);
 
         double z = 8.33f;
         System.out.println(z);
@@ -41,18 +41,18 @@ public class LogicExamples {
             System.out.println("talking... words..");
 
             if (counter++ == 5) amIDone = true;
-        } while (! amIDone);
+        } while (!amIDone);
 
         System.out.println(counter);
 
-        counter =0;
-        while( counter != 5) {
+        counter = 0;
+        while (counter != 5) {
             System.out.println("talking... words...");
-            counter ++;
+            counter++;
         }
 
 
-        for (int i = 0; i < 5; i++ ) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("talking..");
         }
 
@@ -61,3 +61,4 @@ public class LogicExamples {
         }
     }
 }
+
