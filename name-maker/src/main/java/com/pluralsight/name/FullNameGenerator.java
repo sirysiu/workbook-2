@@ -10,19 +10,20 @@ public class FullNameGenerator {
 
         s = new Scanner(System.in);
 
-        System.out.println("Hello user!");
-        System.out.println("I'm a computer.  What is your name?  I'll ask you one piece at a time:");
 
-        String firstName = getUserInputWithPrompt("What is your first name? ");
-        String middleName = getUserInputWithPrompt("What is your middle name? ");
-        String lastName = getUserInputWithPrompt("What is your last name? ");
-        String suffix = getUserInputWithPrompt("What is your suffix name? ");
+        String firstName = getUserInputWithPrompt("Enter your first name: ");
+        String middleName = getUserInputWithPrompt("Enter your middle name: ");
+        String lastName = getUserInputWithPrompt("Enter your last name: ");
+        String suffix = getUserInputWithPrompt("Enter your suffix name? ");
+        if (middleName.isBlank()) {
+            System.out.println();
+        }
 
-        String fullName = "";
+        String fullName = firstName + " " + middleName+ " " + lastName  + " " + suffix;
 
-        fullName = firstName + " " + (middleName.isBlank()?"":" ") + lastName + " " + suffix;
-
-        System.out.println("Thank you, " + fullName);
+        String trimmedName = fullName.trim();
+        String extraSpacesName = trimmedName.replaceAll("\\s+", " ");
+        System.out.println("Thank you, " + extraSpacesName);
 
     }
 

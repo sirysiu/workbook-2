@@ -15,6 +15,7 @@ public class NameMaker {
             fullName.fullNameGen();
         } else if (command == 2) {
             fullParser.nameParser();
+
         }
 
     }
