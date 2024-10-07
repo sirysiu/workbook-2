@@ -26,11 +26,29 @@ public class AddressBuilder {
         String shipCity = scanner.nextLine();
         System.out.println("Shipping State: ");
         String shipState = scanner.nextLine();
-        System.out.println("Shipping Zip Code: \n ");
+        System.out.println("Shipping Zip Code: ");
         int shipZipCode = scanner.nextInt();
+        System.out.println();
 
-address.append(name + "\n \n").append("Billing Address: \n").append(street + "\n").append(city).append(", ").append(state + " ").append(zipCode + "\n \n").
-        append("Shipping Address: \n").append(shipStreet + " \n").append(shipCity + ", ").append(shipState + " ").append(shipZipCode);
+address.append(name)
+        .append("\n \n")
+        .append("Billing Address: \n")
+        .append(street)
+        .append("\n")
+        .append(city)
+        .append(", ")
+        .append(state)
+        .append(" ")
+        .append(zipCode)
+        .append("\n \n")
+        .append("Shipping Address: \n")
+        .append(shipStreet)
+        .append(" \n")
+        .append(shipCity)
+        .append(", ")
+        .append(shipState)
+        .append(" ")
+        .append(shipZipCode);
     String allAddresses = address.toString();
         System.out.println(allAddresses);
 
