@@ -55,4 +55,9 @@ public class CellPhoneService {
         this.owner = owner;
     }
 
+    //dial method
+    public void dial(String phoneNumber) {
+        System.out.println(owner + "'s phone is calling " + phoneNumber);
+    }
+
 }

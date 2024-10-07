@@ -1,12 +1,26 @@
 package com.pluralsight.cell;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 public class CellPhoneApplication {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         CellPhoneService cellPhoneService = new CellPhoneService();
+        input(cellPhoneService, scanner);
+
+        CellPhoneService cellPhoneService1 = new CellPhoneService();
+        input(cellPhoneService1, scanner);
+
+        display(cellPhoneService);
+        display(cellPhoneService1);
+
+        cellPhoneService.dial(cellPhoneService.getPhoneNumber());
+        cellPhoneService1.dial(cellPhoneService1.getPhoneNumber());
+
+        scanner.close();
+    }
+
+    public static void input(CellPhoneService cellPhoneService, Scanner scanner) {
 
         System.out.println("What is the serial number? ");
         cellPhoneService.setSerialNumber(scanner.nextInt());
@@ -23,7 +37,9 @@ public class CellPhoneApplication {
 
         System.out.println("Who is the owner of the phone? ");
         cellPhoneService.setOwner(scanner.nextLine());
+    }
 
+    public static void display(CellPhoneService cellPhoneService) {
         System.out.println("\nCell Phone Information:");
         System.out.println("Serial Number: " + cellPhoneService.getSerialNumber());
         System.out.println("Model: " + cellPhoneService.getModel());
@@ -31,6 +47,6 @@ public class CellPhoneApplication {
         System.out.println("Phone Number: " + cellPhoneService.getPhoneNumber());
         System.out.println("Owner: " + cellPhoneService.getOwner());
 
-        scanner.close();
+
     }
 }
