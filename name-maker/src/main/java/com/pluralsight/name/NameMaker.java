@@ -6,8 +6,6 @@ public class NameMaker {
         FullNameGenerator fullName = new FullNameGenerator();
         FullNameParser fullParser = new FullNameParser();
 
-        System.out.println(fullName);
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type: [1] for Full Name" +"  [2] for Name Parser");
         int command = scanner.nextInt();
